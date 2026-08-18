@@ -18,17 +18,20 @@ repositories {
 }
 
 dependencies {
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	implementation ("io.github.cdimascio:dotenv-java:3.0.0")
+	implementation("org.springframework.boot:spring-boot-starter-webmvc")
 	implementation("org.springframework.boot:spring-boot-starter-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-mongodb")
-	implementation("org.springframework.boot:spring-boot-starter-webmvc")
-	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("org.postgresql:postgresql")
-	testImplementation("org.springframework.boot:spring-boot-starter-jdbc-test")
-	testImplementation("org.springframework.boot:spring-boot-starter-mongodb-test")
-	testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
+
+	// testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
+	// testImplementation("org.springframework.boot:spring-boot-starter-jdbc-test")
+	// testImplementation("org.springframework.boot:spring-boot-starter-mongodb-test")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.withType<Test> {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
