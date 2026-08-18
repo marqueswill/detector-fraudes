@@ -76,9 +76,22 @@ Os relatórios de execução dos testes serão gerados automaticamente no diret�
 
 ## Padrão de Arquitetura
 
-Como a persistência será implementada manualmente utilizando a JDBC API, os pacotes são organizdos internamente (dentro de `src/main/java/com/banco_real/api_transacoes/`) seguindo o padrão de camadas:
+O projeto utiliza uma **Arquitetura em Camadas** enriquecida com conceitos táticos do **Domain-Driven Design (DDD)**. Como a persistência é implementada manualmente utilizando a JDBC API, essa abordagem isola o coração do sistema das tecnologias externas.
 
-- `/controllers`: Responsáveis por receber requisições HTTP e retornar respostas.
-- `/services`: Contém as regras de negócio e integrações entre domínios.
-- `/repositories`: Classes focadas em executar queries SQL diretas no PostgreSQL via JDBC e interações de documentos via driver do MongoDB.
-- `/models`: Entidades de domínio, DTOs e records.
+No Domain-Driven Design (DDD), cada conceito serve a um propósito específico na modelagem do software:
+
+- **DTO (Data Transfer Object):** Objetos passivos e imutáveis (geralmente implementados como `records`) usados exclusivamente para transportar dados entre as requisições HTTP da API e o sistema, sem regras de negócio.
+- **Value Object (Objeto de Valor):** Objetos imutáveis que descrevem características ou medidas do domínio, sem identidade própria. Possuem validações próprias para garantir que nunca existam em estado inválido (ex: `CPF`, `QuantiaMonetaria`).
+- **Entity (Entidade):** Objetos definidos por uma identidade única (um ID) que persiste ao longo do tempo. Encapsulam o estado e o comportamento real das regras de negócio (ex: `Usuario`, `Transacao`).
+- **Aggregate (Agregado):** Um grupo de entidades e objetos de valor tratados como uma unidade única de consistência. Possui uma "Raiz" (Aggregate Root) que controla todas as mudanças e garante que as regras do grupo sejam respeitadas (ex: uma `ContaBancaria` gerenciando seus `Saldos` e `Limites`).
+- **Repository (Repositório):** Abstração responsável por gerenciar a persistência dos Agregados, permitindo salvá-los e recuperá-los do banco de dados como uma unidade inteira.
+- **Domain Service (Serviço de Domínio):** Contém lógica de negócio pura que não se encaixa naturalmente dentro de uma única entidade ou que precisa validar interações entre múltiplos agregados.
+
+### Organização de Pacotes
+
+Os pacotes são organizados internamente (`src/main/java/com/banco_real/api_transacoes/`) da seguinte forma:
+
+- **/controllers:** Portas de entrada da aplicação. São responsáveis por receber as requisições HTTP, converter o payload JSON para DTOs, delegar a execução aos _Services_ e retornar as respostas HTTP adequadas.
+- **/services (Application Services):** Orquestradores de casos de uso. Eles buscam os dados necessários via _Repositories_, acionam as regras de negócio nas entidades do domínio e orquestram a persistência do novo estado.
+- **/repositories:** Camada de persistência. Concentra a execução de queries SQL diretas no PostgreSQL via JDBC e as interações NoSQL com o MongoDB. São responsáveis por converter os registros do banco em entidades do domínio (idratação) e vice-versa.
+- **/models:** O centro da aplicação, blindado de frameworks. Contém as subpastas/pacotes com as Entidades, Agregados, Objetos de Valor e os DTOs do sistema.
