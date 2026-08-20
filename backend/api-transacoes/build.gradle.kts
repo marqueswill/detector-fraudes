@@ -1,11 +1,12 @@
+group = "com.banco-real"
+version = "0.0.1-SNAPSHOT"
+
 plugins {
 	java
 	id("org.springframework.boot") version "4.1.0"
 	id("io.spring.dependency-management") version "1.1.7"
 }
 
-group = "com.banco-real"
-version = "0.0.1-SNAPSHOT"
 
 java {
 	toolchain {
