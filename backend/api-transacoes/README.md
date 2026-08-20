@@ -51,7 +51,7 @@ O projeto utiliza o wrapper do Gradle (`gradlew`). Para iniciar o servidor de de
 **Windows:**
 
 ```cmd
-gradlew.bat bootRun
+.\gradlew.bat bootRun
 ```
 
 Por padrão, a aplicação iniciará na porta `8080`. O Spring Boot DevTools permite o recarregamento automático da aplicação ao detectar alterações no código compilado.
@@ -69,7 +69,7 @@ Para executar a suíte de testes unitários e de integração, navegue até o di
 **Windows:**
 
 ```cmd
-gradlew.bat test
+.\gradlew.bat test
 ```
 
 Os relatórios de execução dos testes serão gerados automaticamente no diretório `build/reports/tests/test/`.
