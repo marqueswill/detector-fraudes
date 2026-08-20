@@ -25,9 +25,6 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-mongodb")
 	runtimeOnly("org.postgresql:postgresql")
 
-	// testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
-	// testImplementation("org.springframework.boot:spring-boot-starter-jdbc-test")
-	// testImplementation("org.springframework.boot:spring-boot-starter-mongodb-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }

@@ -1,0 +1,38 @@
+Title	URL	Assignees	Status	Linked pull requests	Sub-issues progress	Priority	Estimate	Size
+Identificação e Autenticação	https://github.com/marqueswill/detector-fraudes/issues/1	marqueswill	Backlog					
+Cadastro e Abertura de Contas	https://github.com/marqueswill/detector-fraudes/issues/2	marqueswill	Backlog					
+Processamento de Transações Financeiras	https://github.com/marqueswill/detector-fraudes/issues/3	marqueswill	Backlog					
+Persistência de Dados	https://github.com/marqueswill/detector-fraudes/issues/4	marqueswill	Backlog					
+Consulta e Organização de Extratos	https://github.com/marqueswill/detector-fraudes/issues/5	marqueswill	Backlog					
+Auditoria e Rastreabilidade (Logs Administrativos)	https://github.com/marqueswill/detector-fraudes/issues/6	marqueswill	Backlog					
+Gestão de Limites de Transação	https://github.com/marqueswill/detector-fraudes/issues/7	marqueswill	Backlog					
+Análise Preditiva de Transações Suspeitas	https://github.com/marqueswill/detector-fraudes/issues/8	marqueswill	Backlog					
+Segmentação de Clientes por Comportamento	https://github.com/marqueswill/detector-fraudes/issues/9	marqueswill	Backlog					
+Triagem Automatizada de Suporte via NLP	https://github.com/marqueswill/detector-fraudes/issues/10	marqueswill	Backlog					
+Autenticação Segura no Dispositivo	https://github.com/marqueswill/detector-fraudes/issues/11	marqueswill	Backlog					
+Consulta de Saldos e Movimentações	https://github.com/marqueswill/detector-fraudes/issues/12	marqueswill	Backlog					
+Execução de Pagamentos e Transferências	https://github.com/marqueswill/detector-fraudes/issues/13	marqueswill	Backlog					
+Central de Ajuda e Relato de Erros	https://github.com/marqueswill/detector-fraudes/issues/14	marqueswill	Backlog					
+Notificações	https://github.com/marqueswill/detector-fraudes/issues/15	marqueswill	Backlog					
+Onboarding e KYC (Conheça seu Cliente)	https://github.com/marqueswill/detector-fraudes/issues/16	marqueswill	Backlog					
+Geração e Compartilhamento de Comprovantes	https://github.com/marqueswill/detector-fraudes/issues/17	marqueswill	Backlog					
+Gestão de Perfil e Segurança	https://github.com/marqueswill/detector-fraudes/issues/18	marqueswill	Backlog					
+Acesso Restrito Administrativo	https://github.com/marqueswill/detector-fraudes/issues/19	marqueswill	Backlog					
+Monitoramento e Mitigação de Fraudes	https://github.com/marqueswill/detector-fraudes/issues/20	marqueswill	Backlog					
+Gestão de Grupos de Risco e Carteira de Clientes	https://github.com/marqueswill/detector-fraudes/issues/21	marqueswill	Backlog					
+Governança e Saúde dos Modelos de IA	https://github.com/marqueswill/detector-fraudes/issues/22	marqueswill	Backlog					
+Dashboard de Indicadores de Negócio	https://github.com/marqueswill/detector-fraudes/issues/23	marqueswill	Backlog					
+Atendimento e Resolução de Chamados (Help Desk)	https://github.com/marqueswill/detector-fraudes/issues/24	marqueswill	Backlog					
+Controle de Acessos e Permissões (RBAC)	https://github.com/marqueswill/detector-fraudes/issues/25	marqueswill	Backlog					
+Setup - Sistema Detecção de Fraudes (Épico 2)	https://github.com/marqueswill/detector-fraudes/issues/29	marqueswill	Backlog					
+Setup - Aplicativo Mobile (Épico 3)	https://github.com/marqueswill/detector-fraudes/issues/30	marqueswill	Backlog					
+Setup - Painel de Gestão (Épico 4)	https://github.com/marqueswill/detector-fraudes/issues/31	marqueswill	Backlog					
+Gestão de Cartão e Fatura	https://github.com/marqueswill/detector-fraudes/issues/35	marqueswill	Backlog					
+Gestão do Cartão de Crédito	https://github.com/marqueswill/detector-fraudes/issues/36	marqueswill	Backlog					
+Desenho fluxo dados sistema	https://github.com/marqueswill/detector-fraudes/issues/33		Ready					
+Schema DB	https://github.com/marqueswill/detector-fraudes/issues/37	marqueswill	In progress					
+Mapeamento entidades sistema	https://github.com/marqueswill/detector-fraudes/issues/34		In review					
+Setup Inicial da Arquitetura e Repositórios	https://github.com/marqueswill/detector-fraudes/issues/26	marqueswill	Done	https://github.com/marqueswill/detector-fraudes/pull/32	2 / 2 (100%)	P0		M
+Geral e Infraestrutura (DevOps)	https://github.com/marqueswill/detector-fraudes/issues/27		Done					
+Back-end e API (Épico 1)	https://github.com/marqueswill/detector-fraudes/issues/28		Done					
+Setup inicial	https://github.com/marqueswill/detector-fraudes/pull/32	marqueswill	Done					
