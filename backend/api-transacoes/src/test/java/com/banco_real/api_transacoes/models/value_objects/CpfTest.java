@@ -8,8 +8,8 @@ import org.junit.jupiter.api.Test;
 class CpfTest {
 
     @Test
-    @Tag("Value Object")
-    @Tag("Happy Path")
+    @Tag("value-object")
+    @Tag("happy-path")
     void deveInstanciarCpfValido() {
         String cpfValido = "01234567890"; // Assumindo uma string limpa válida
 
@@ -20,7 +20,7 @@ class CpfTest {
     }
 
     @Test
-    @Tag("Value Object")
+    @Tag("value-object")
     void deveImpedirInstanciacaoDeCpfInvalido() {
         String cpfInvalido = "111.222.333-44"; // Formato ou cálculo incorreto
 

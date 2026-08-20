@@ -3,4 +3,4 @@
 
 @Tag("Value Object")
 @Tag("Models")
-@Tag("Happy Path")
+@Tag("happy-path")

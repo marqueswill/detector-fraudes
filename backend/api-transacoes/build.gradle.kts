@@ -32,4 +32,19 @@ dependencies {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+    testLogging {
+        events("passed", "failed", "skipped")
+    }
+}
+
+
+tasks.named<Test>("test") {
+    testLogging {
+        // Show test events in the console
+        events("passed", "skipped", "failed")
+        // Show the class name and method name
+        showStandardStreams = true
+        exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+
+    }
 }
